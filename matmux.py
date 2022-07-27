@@ -27,13 +27,27 @@ class Solution:
         # return: List[List[int]]
         
         # TODO: Write code below to return a nested list with the solution to the prompt
-        answer = [[0, 0],[0,0]]
-        for i in range(len(m1)):
-            for j in range(len(m2[0])):
-                 for k in range(len(m2)):
-                    answer[i][j] += m1[i][k] * m2[k][j]
-        for a in answer:
-            return a
+        # answer = [[0, 0],[0, 0]]
+        # for i in range(len(m1)):
+        #     for j in range(len(m2[0])):
+        #          for k in range(len(m2)):
+        #             answer[i][j] += m1[i][k] * m2[k][j]
+        # for a in answer:
+        #     return answer[a]
+        n1 = []
+        n2 = []
+        for i in range(2):
+            row = m1[i]
+            row1 = m2[0]
+            row2 = m2[1]
+            for j in range(2):
+                product = row[0] * row1[j] + row[1] * row2[j]
+                if i == 0:
+                    n1.append(product)
+                else:
+                    n2.append(product)
+        final = [n1, n2]
+        return final
         pass
 
 def main():
