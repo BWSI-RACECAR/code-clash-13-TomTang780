@@ -30,7 +30,7 @@ class Solution:
         answer = [[0, 0],[0,0]]
         for i in range(len(m1)):
             for j in range(len(m2[0])):
-                 for k in range(len(B)):
+                 for k in range(len(m2)):
                     answer[i][j] += m1[i][k] * m2[k][j]
         for a in answer:
             return a
