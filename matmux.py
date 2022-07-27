@@ -33,7 +33,7 @@ class Solution:
                  for k in range(len(m2)):
                     answer[i][j] += m1[i][k] * m2[k][j]
         for a in answer:
-            print(a)
+            return a
         pass
 
 def main():
